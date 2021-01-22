@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+  x:Class="DDubucks.Views.TestPage"
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+  xmlns:views="clr-namespace:DDubucks" xmlns:views1="clr-namespace:DDubucks.Views"
+    android:TabbedPage.ToolbarPlacement="Bottom">
+    <TabbedPage.Children>
+        <NavigationPage 
+            Title="Main"
+            BackgroundColor="White"
+            Icon="main.png">
+            <x:Arguments>
+                <views1:MainPage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage
+             Title="Coupon"
+             BackgroundColor="White"
+             Icon="coupon.png">
+            <x:Arguments>
+                <views1:CouponPage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage
+            x:Name="MyPage"
+            Title="MyPage"
+            BackgroundColor="White"
+            Icon="mypage.png">
+            <x:Arguments>
+                <views1:MyPage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage
+            Title="MyCoupon"
+            BackgroundColor="White"
+            Icon="mycoupon.png">
+            <x:Arguments>
+                <views1:MyCouponPage />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+</TabbedPage>

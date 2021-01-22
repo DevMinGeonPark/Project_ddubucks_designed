@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DDubucks.Views.LoginPage"
+             xmlns:models="clr-namespace:DDubucks.Models">
+    
+    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Image Source="ddubucks_login_logo.png" 
+                   Margin="0,0,0,30"/>
+            <Button Image="kakao_login_btn.png" 
+                    Command="{Binding SNSSignInCommand}"
+                    CommandParameter="{x:Static models:SNSProvider.Kakao}"
+                    BackgroundColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
